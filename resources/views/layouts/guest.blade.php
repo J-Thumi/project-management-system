@@ -52,7 +52,7 @@
                     <span class="font-heading font-semibold text-white text-lg">GreenScape Projects</span>
                 </div>
                 <p class="text-sm text-white/70 max-w-xs">
-                    From first inquiry to final planting — one platform to design, quote,
+                    From first inquiry to final planting, one platform to design, quote,
                     track, and deliver every landscaping project.
                 </p>
             </div>

@@ -9,9 +9,9 @@
         @php
             $links = [
                 ['label' => 'Dashboard', 'route' => 'dashboard'],
-                ['label' => 'My Projects', 'route' => 'dashboard'],
-                ['label' => 'Quotations', 'route' => 'dashboard'],
-                ['label' => 'Messages', 'route' => 'dashboard'],
+                ['label' => 'My Projects', 'route' => 'projects.index'],
+                ['label' => 'Quotations', 'route' => 'quotations.index'],
+                ['label' => 'Messages', 'route' => 'messages.index'],
                 ['label' => 'Profile', 'route' => 'profile'],
             ];
         @endphp
@@ -20,7 +20,6 @@
             <a href="{{ route($link['route']) }}"
                class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors
                       {{ request()->routeIs($link['route']) ? 'bg-secondary/20 text-white font-semibold' : 'hover:bg-white/10' }}">
-                
                 {{ $link['label'] }}
             </a>
         @endforeach
@@ -30,7 +29,7 @@
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button type="submit" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm w-full hover:bg-white/10">
-                 Log out
+                Log out
             </button>
         </form>
     </div>
@@ -46,9 +45,9 @@
         </div>
         <nav class="flex-1 px-4 py-6 space-y-1 text-sm">
             <a href="{{ route('dashboard') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10">Dashboard</a>
-            <a href="{{ route('dashboard') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10">My Projects</a>
-            <a href="{{ route('dashboard') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10">Quotations</a>
-            <a href="{{ route('dashboard') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10">Messages</a>
+            <a href="{{ route('projects.index') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10">My Projects</a>
+            <a href="{{ route('quotations.index') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10">Quotations</a>
+            <a href="{{ route('messages.index') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10">Messages</a>
             <a href="{{ route('profile') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10">Profile</a>
         </nav>
         <div class="p-4 border-t border-white/10">

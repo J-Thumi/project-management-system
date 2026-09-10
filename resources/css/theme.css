@@ -1,0 +1,147 @@
+/*
+  Shared theme for the Landscape Project Management client app.
+  Import this file (or its variables) on every Blade layout so
+  every page, landing, auth, dashboard, profile, stays visually
+  consistent.
+*/
+
+:root {
+  /* Brand palette, earthy greens, sand accent */
+  --color-primary: #2f5233;       /* deep forest green */
+  --color-primary-dark: #203a24;
+  --color-primary-light: #4a7856;
+  --color-secondary: #8bc34a;     /* fresh leaf green */
+  --color-secondary-dark: #6a9c34;
+  --color-accent: #c9a66b;        /* sand / earth accent */
+  --color-accent-light: #e6d3ad;
+
+  --color-bg: #f8f6f1;            /* warm off-white background */
+  --color-surface: #ffffff;
+  --color-surface-alt: #f1efe6;
+
+  --color-text: #1f2a1f;
+  --color-text-muted: #5c6b5c;
+  --color-text-inverse: #f8f6f1;
+
+  --color-border: #e3dfd3;
+  --color-success: #4a7856;
+  --color-warning: #d98c3a;
+  --color-danger: #b5482f;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 1px 2px rgba(31, 42, 31, 0.06);
+  --shadow-md: 0 8px 24px rgba(31, 42, 31, 0.08);
+  --shadow-lg: 0 16px 40px rgba(31, 42, 31, 0.12);
+
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary-dark);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary-dark);
+}
+.btn-secondary:hover {
+  background-color: var(--color-secondary-dark);
+  color: #fff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+/* Cards / surfaces */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Form fields */
+.field-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.field-input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 0 3px rgba(139, 195, 74, 0.25);
+}
+
+/* Status pills used in dashboard/progress tracking */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.pill-success { background: #e5f0e6; color: var(--color-success); }
+.pill-warning { background: #faeada; color: var(--color-warning); }
+.pill-danger  { background: #f5e1db; color: var(--color-danger); }
+.pill-muted   { background: var(--color-surface-alt); color: var(--color-text-muted); }

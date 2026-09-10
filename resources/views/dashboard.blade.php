@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard — GreenScape Projects')
+@section('title', 'Dashboard, GreenScape Projects')
 @section('page-title', 'Dashboard')
 
 @section('content')
@@ -9,11 +9,11 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
         <div>
             <h2 class="font-heading text-2xl lg:text-3xl font-bold text-primary-dark tracking-tight">
-                Welcome back, {{ explode(' ', auth()->user()->name ?? 'Jane')[0] }} 
+                Welcome back, {{ explode(' ', auth()->user()->name ?? 'Jane')[0] }}
             </h2>
             <p class="text-[#5c6b5c] text-sm mt-1">Here is a real-time overview of your landscape project's progress.</p>
         </div>
-        <a href="#" class="btn btn-primary inline-flex items-center gap-2 self-start sm:self-auto px-5 py-2.5 rounded-lg font-medium shadow-sm hover:shadow transition-all">
+        <a href="{{ route('projects.create') }}" class="btn btn-primary inline-flex items-center gap-2 self-start sm:self-auto px-5 py-2.5 rounded-lg font-medium shadow-sm hover:shadow transition-all">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
             New project request
         </a>
@@ -63,11 +63,10 @@
                 @endphp
                 @foreach ($stages as $stage)
                     <li class="ml-6 relative group">
-                        {{-- Dot indicator --}}
                         <span class="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full border-2 border-white ring-2 ring-transparent transition-all
                             {{ $stage['status'] === 'done' ? 'bg-emerald-600 ring-emerald-100' : ($stage['status'] === 'current' ? 'bg-amber-500 ring-amber-100 scale-110' : 'bg-[#e3dfd3]') }}">
                         </span>
-                        
+
                         <div class="flex items-center justify-between">
                             <p class="text-sm font-semibold {{ $stage['status'] === 'upcoming' ? 'text-[#5c6b5c]/70 font-normal' : 'text-primary-dark' }}">
                                 {{ $stage['label'] }}
@@ -120,7 +119,7 @@
 
     {{-- Plant tracking + Recent photos --}}
     <div class="grid lg:grid-cols-3 gap-8 mt-8">
-        
+
         {{-- Plant Tracking Table --}}
         <div class="card p-6 lg:p-8 bg-white rounded-2xl shadow-sm border border-[#e3dfd3]/60 lg:col-span-2">
             <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#e3dfd3]/60">

@@ -1,6 +1,6 @@
 @extends('layouts.guest')
 
-@section('title', 'GreenScape Projects — Landscape Design & Project Management')
+@section('title', 'GreenScape Projects, Landscape Design & Project Management')
 
 @section('content')
 
@@ -15,8 +15,8 @@
                     From first sketch to<br class="hidden md:block"> the last leaf planted.
                 </h1>
                 <p class="text-[#5c6b5c] text-lg mb-8 max-w-md">
-                    GreenScape Projects manages every stage of your landscaping project —
-                    design, quotation, planting, and maintenance — with live updates
+                    GreenScape Projects manages every stage of your landscaping project,
+                    design, quotation, planting, and maintenance, with live updates
                     you can follow from your phone.
                 </p>
                 <div class="flex flex-wrap gap-4">
@@ -50,7 +50,7 @@
         <div class="max-w-2xl mb-12">
             <h2 class="font-heading text-3xl font-bold mb-3">What we do</h2>
             <p class="text-[#5c6b5c]">
-                One team, one platform — covering every stage of residential and
+                One team, one platform, covering every stage of residential and
                 commercial landscape delivery.
             </p>
         </div>
@@ -107,13 +107,13 @@
             <h2 class="font-heading text-3xl font-bold mb-4">Built by people who plant, not just people who code</h2>
             <p class="text-[#5c6b5c] mb-4">
                 GreenScape Projects grew out of years spent running landscaping
-                crews the old way — spreadsheets, missed deliveries, and clients
+                crews the old way, spreadsheets, missed deliveries, and clients
                 left wondering what was happening on site. We built the platform
                 we wished we'd had.
             </p>
             <p class="text-[#5c6b5c] mb-6">
                 Today it's the single source of truth for our designers, site
-                supervisors, and clients — from the first inspiration board to
+                supervisors, and clients, from the first inspiration board to
                 the last plant in the ground.
             </p>
             <a href="{{ route('register') }}" class="btn btn-secondary">Join as a client</a>

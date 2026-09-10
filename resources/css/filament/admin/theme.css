@@ -1,5 +1,10 @@
-@import '/vendor/filament/filament/resources/css/theme.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+@import '../../../../vendor/filament/filament/resources/css/base.css';
 
+@config 'tailwind.config.js';
 /* --- Sidebar: match the client-side dark green sidebar --- */
 .fi-sidebar {
     background-color: #203a24;

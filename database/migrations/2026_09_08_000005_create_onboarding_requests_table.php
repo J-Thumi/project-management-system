@@ -16,7 +16,7 @@ return new class extends Migration
             $table->decimal('budget_min', 12, 2)->nullable();
             $table->decimal('budget_max', 12, 2)->nullable();
             $table->string('preferred_style', 80)->nullable();
-            $table->jsonb('inspiration_links')->default('[]');
+            $table->json('inspiration_links')->nullable();
             $table->text('additional_notes')->nullable();
             $table->timestamp('created_at')->useCurrent();
         });

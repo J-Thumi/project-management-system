@@ -29,7 +29,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-            ->theme(asset('css/filament/admin/theme.css'))
+            ->viteTheme('resources/css/filament/admin/theme.css')
             ->renderHook(
                 PanelsRenderHook::HEAD_END,
                 fn () => '<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,9 +40,9 @@ class AdminPanelProvider extends PanelProvider
             // ->favicon(asset('images/favicon.png'))  // optional
             ->font('Poppins') // matches the client-side heading font; Filament pulls it from Google Fonts automatically
             ->colors([
-                'primary' => Color::hex('#2f5233'),  // deep forest green, same as --color-primary
-                'success' => Color::hex('#8bc34a'),  // leaf green, same as --color-secondary
-                'warning' => Color::hex('#c9a66b'),  // sand accent, same as --color-accent
+                'primary' => Color::hex('#2f5233'),  // deep forest green — same as --color-primary
+                'success' => Color::hex('#8bc34a'),  // leaf green — same as --color-secondary
+                'warning' => Color::hex('#c9a66b'),  // sand accent — same as --color-accent
                 'danger'  => Color::hex('#b5482f'),  // matches theme.css --color-danger
                 'gray'    => Color::hex('#5c6b5c'),  // matches --color-text-muted for a warmer neutral gray
             ])

@@ -13,7 +13,7 @@ return new class extends Migration
             $table->uuid('id')->primary()->default(DB::raw('(UUID())'));
             $table->foreignUuid('project_id')->constrained('projects')->onDelete('cascade');
             $table->foreignUuid('supervisor_id')->constrained('users')->onDelete('restrict');
-            $table->date('log_date')->default(DB::raw('CURRENT_DATE'));
+            $table->date('log_date')->default(DB::raw('(CURRENT_DATE)')); // Fixed: Enclosed in parentheses
             $table->text('summary_notes');
             $table->timestamp('created_at')->useCurrent();
         });

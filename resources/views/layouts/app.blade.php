@@ -36,11 +36,14 @@
 </head>
 <body class="font-body bg-base text-[#1f2a1f] antialiased" x-data="{ sidebarOpen: false }">
 
-    <div class="flex min-h-screen">
+    {{-- Lock view height to screen height and prevent body scrolling --}}
+    <div class="flex h-screen overflow-hidden">
 
+        {{-- Sticky Desktop Sidebar --}}
         @include('partials.app-sidebar')
 
-        <div class="flex-1 flex flex-col min-w-0">
+        {{-- Main Area wrapper with independent vertical scrolling --}}
+        <div class="flex-1 flex flex-col min-w-0 h-screen overflow-y-auto">
 
             @include('partials.app-topbar')
 

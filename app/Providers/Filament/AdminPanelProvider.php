@@ -29,7 +29,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-            ->viteTheme('resources/css/filament/admin/theme.css')
+            ->theme(asset('css/filament/admin/theme.css'))
             ->renderHook(
                 PanelsRenderHook::HEAD_END,
                 fn () => '<link rel="preconnect" href="https://fonts.googleapis.com">

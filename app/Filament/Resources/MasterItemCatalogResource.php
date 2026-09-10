@@ -58,7 +58,7 @@ class MasterItemCatalogResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('default_unit_price')
                     ->numeric()
-                    ->prefix('$')
+                    ->prefix('Ksh')
                     ->default(0.00)
                     ->required(),
                 FileUpload::make('images')
@@ -85,7 +85,7 @@ class MasterItemCatalogResource extends Resource
                 Tables\Columns\TextColumn::make('botanical_name')->searchable(),
                 Tables\Columns\TextColumn::make('category')->badge(),
                 Tables\Columns\TextColumn::make('unit_of_measure'),
-                Tables\Columns\TextColumn::make('default_unit_price')->money('USD')->sortable(),
+                Tables\Columns\TextColumn::make('default_unit_price')->money('Ksh')->sortable(),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('category')->options([

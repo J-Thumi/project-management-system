@@ -78,15 +78,7 @@ class QuotationResource extends Resource
                                 ->disabled()
                                 ->dehydrated()
                                 ->required(),
-                            Forms\Components\Select::make('category')
-                                ->options([
-                                    'plant' => 'Plant',
-                                    'hardscape' => 'Hardscape',
-                                    'irrigation' => 'Irrigation',
-                                    'lighting' => 'Lighting',
-                                    'soil_mulch' => 'Soil / Mulch',
-                                    'labor' => 'Labor',
-                                ])
+                            Forms\Components\TextInput::make('category')
                                 ->disabled()
                                 ->dehydrated()
                                 ->required(),
